@@ -1,6 +1,6 @@
 {
-    "name": "wayofdev/spiral-starter-tpl",
-    "description": "🚀 Pre-configured Spiral Framework Project Template. Includes PHPUnit, Pest PHP, PHPStan, PHP CS Fixer, and CI tools. Supports OpenAPI, DDD, Deptrac, Deployer, PHP 8.3, Docker, local SSL, and DNS. Enhance development with advanced features and maintain high code quality.",
+    "name": "wayofdev/spiral-app-temporal-demo",
+    "description": "🚀 Spiral Framework application with Temporal integration to demonstrate Workflow Engine.",
     "license": "MIT",
     "type": "project",
     "keywords": [
@@ -29,9 +29,9 @@
     ],
     "homepage": "https://wayof.dev",
     "support": {
-        "issues": "https://github.com/wayofdev/spiral-starter-tpl/issues",
-        "source": "https://github.com/wayofdev/spiral-starter-tpl",
-        "security": "https://github.com/wayofdev/spiral-starter-tpl/blob/master/.github/SECURITY.md"
+        "issues": "https://github.com/wayofdev/spiral-app-temporal-demo/issues",
+        "source": "https://github.com/wayofdev/spiral-app-temporal-demo",
+        "security": "https://github.com/wayofdev/spiral-app-temporal-demo/blob/master/.github/SECURITY.md"
     },
     "require": {
         "php": "^8.3",
