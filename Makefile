@@ -89,7 +89,7 @@ else
 	WHITE := ""
 	RST := ""
 endif
-MAKE_LOGFILE = /tmp/wayofdev-spiral-starter-tpl.log
+MAKE_LOGFILE = /tmp/wayofdev-spiral-app-temporal-demo.log
 MAKE_CMD_COLOR := $(BLUE)
 
 default: all
@@ -102,7 +102,7 @@ help: ## Show this menu
 	@echo
 	@echo '    📑 Logs are stored in      $(MAKE_LOGFILE)'
 	@echo
-	@echo '    📦 Project                 spiral-starter-tpl (https://github.com/wayofdev/spiral-starter-tpl)'
+	@echo '    📦 Project                 spiral-app-temporal-demo (https://github.com/wayofdev/spiral-app-temporal-demo)'
 	@echo '    🤠 Makefile Author         Andrij Orlenko (https://github.com/lotyp)'
 	@echo '    🏢 ${YELLOW}Org                     wayofdev (https://github.com/wayofdev)${RST}'
 	@echo

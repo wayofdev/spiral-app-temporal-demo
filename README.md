@@ -11,20 +11,20 @@
 
 <p align="center">
     <strong>Build</strong><br>
-    <a href="https://actions-badge.atrox.dev/wayofdev/spiral-starter-tpl/goto" target="_blank"><img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwayofdev%2Fspiral-starter-tpl%2Fbadge&style=flat-square&label=github%20actions"/></a>
-    <a href="https://github.com/wayofdev/spiral-starter-tpl/actions/workflows/deploy-staging.yml?query=workflow%3ADeploy" target="_blank"><img alt="Deploy to Staging Status" src="https://img.shields.io/github/actions/workflow/status/wayofdev/spiral-starter-tpl/deploy-staging.yml?branch=develop&style=flat-square&label=deploy%20to%20staging&logo=github"/></a>
-    <a href="https://github.com/wayofdev/spiral-starter-tpl/actions/workflows/deploy-release.yml?query=workflow%3ADeploy" target="_blank"><img alt="Deploy to Production Status" src="https://img.shields.io/github/actions/workflow/status/wayofdev/spiral-starter-tpl/deploy-release.yml?style=flat-square&label=deploy%20to%20prod&logo=github"/></a>
+    <a href="https://actions-badge.atrox.dev/wayofdev/spiral-app-temporal-demo/goto" target="_blank"><img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwayofdev%2Fspiral-app-temporal-demo%2Fbadge&style=flat-square&label=github%20actions"/></a>
+    <a href="https://github.com/wayofdev/spiral-app-temporal-demo/actions/workflows/deploy-staging.yml?query=workflow%3ADeploy" target="_blank"><img alt="Deploy to Staging Status" src="https://img.shields.io/github/actions/workflow/status/wayofdev/spiral-app-temporal-demo/deploy-staging.yml?branch=develop&style=flat-square&label=deploy%20to%20staging&logo=github"/></a>
+    <a href="https://github.com/wayofdev/spiral-app-temporal-demo/actions/workflows/deploy-release.yml?query=workflow%3ADeploy" target="_blank"><img alt="Deploy to Production Status" src="https://img.shields.io/github/actions/workflow/status/wayofdev/spiral-app-temporal-demo/deploy-release.yml?style=flat-square&label=deploy%20to%20prod&logo=github"/></a>
 </p>
 <p align="center">
     <strong>Project</strong><br>
-    <a href="https://github.com/wayofdev/spiral-starter-tpl" target="_blank"><img src="https://img.shields.io/github/v/release/wayofdev/spiral-starter-tpl?style=flat-square" alt="Latest Stable Version"></a>
-    <a href="https://github.com/wayofdev/spiral-starter-tpl" target="_blank"><img alt="Commits since latest release" src="https://img.shields.io/github/commits-since/wayofdev/spiral-starter-tpl/latest?style=flat-square"></a>
-    <a href="https://github.com/wayofdev/spiral-starter-tpl" target="_blank"><img alt="PHP Version Require" src="https://poser.pugx.org/wayofdev/laravel-package-tpl/require/php?style=flat-square"></a>
+    <a href="https://github.com/wayofdev/spiral-app-temporal-demo" target="_blank"><img src="https://img.shields.io/github/v/release/wayofdev/spiral-app-temporal-demo?style=flat-square" alt="Latest Stable Version"></a>
+    <a href="https://github.com/wayofdev/spiral-app-temporal-demo" target="_blank"><img alt="Commits since latest release" src="https://img.shields.io/github/commits-since/wayofdev/spiral-app-temporal-demo/latest?style=flat-square"></a>
+    <a href="https://github.com/wayofdev/spiral-app-temporal-demo" target="_blank"><img alt="PHP Version Require" src="https://poser.pugx.org/wayofdev/laravel-package-tpl/require/php?style=flat-square"></a>
 </p>
 <p align="center">
     <strong>Quality</strong><br>
-    <a href="https://app.codecov.io/gh/wayofdev/spiral-starter-tpl" target="_blank"><img alt="Codecov" src="https://img.shields.io/codecov/c/github/wayofdev/spiral-starter-tpl?style=flat-square&logo=codecov"></a>
-    <a href="https://dashboard.stryker-mutator.io/reports/github.com/wayofdev/spiral-starter-tpl/develop" target="_blank"><img alt="Mutation testing badge" src="https://img.shields.io/endpoint?style=flat-square&label=mutation%20score&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fwayofdev%2Fspiral-starter-tpl%2Fmaster"></a>
+    <a href="https://app.codecov.io/gh/wayofdev/spiral-app-temporal-demo" target="_blank"><img alt="Codecov" src="https://img.shields.io/codecov/c/github/wayofdev/spiral-app-temporal-demo?style=flat-square&logo=codecov"></a>
+    <a href="https://dashboard.stryker-mutator.io/reports/github.com/wayofdev/spiral-app-temporal-demo/develop" target="_blank"><img alt="Mutation testing badge" src="https://img.shields.io/endpoint?style=flat-square&label=mutation%20score&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fwayofdev%2Fspiral-app-temporal-demo%2Fmaster"></a>
     <a href=""><img src="https://img.shields.io/badge/phpstan%20level-8%20of%209-brightgreen?style=flat-square" alt="PHP Stan Level 8 of 9"></a>
 </p>
 <p align="center">
@@ -172,13 +172,13 @@ Check full instructions in [docker-shared-services](https://github.com/wayofdev/
 
 1. **Clone** repository:
 
-   After forking or creating generating repository from template, you can clone it to your local machine. In this example we will use `spiral-starter-tpl` repository as starting point.
+   After forking or creating generating repository from template, you can clone it to your local machine. In this example we will use `spiral-app-temporal-demo` repository as starting point.
 
    ```bash
    git clone \
-     git@github.com:wayofdev/spiral-starter-tpl.git \
-     ~/projects/spiral-starter-tpl && \
-   cd ~/projects/spiral-starter-tpl
+     git@github.com:wayofdev/spiral-app-temporal-demo.git \
+     ~/projects/spiral-app-temporal-demo && \
+   cd ~/projects/spiral-app-temporal-demo
    ```
 
 2. **Generate** `.env` file
@@ -188,7 +188,7 @@ Check full instructions in [docker-shared-services](https://github.com/wayofdev/
    ```bash
    $ make env \
        SHARED_SERVICES_NAMESPACE=ss \
-       COMPOSE_PROJECT_NAME=spiral-starter-tpl
+       COMPOSE_PROJECT_NAME=spiral-app-temporal-demo
    ```
 
    **Change** generated `.env` file to match your needs, if needed.
@@ -198,7 +198,7 @@ Check full instructions in [docker-shared-services](https://github.com/wayofdev/
    ```bash
    $ make env \
        SHARED_SERVICES_NAMESPACE=ss \
-       COMPOSE_PROJECT_NAME=spiral-starter-tpl \
+       COMPOSE_PROJECT_NAME=spiral-app-temporal-demo \
        FORCE=true
    ```
 
@@ -215,13 +215,13 @@ Check full instructions in [docker-shared-services](https://github.com/wayofdev/
    $ make up
    ```
 
-4. **Open** your browser and navigate to `https://api.spiral-starter-tpl.docker` to see Laravel welcome page.
+4. **Open** your browser and navigate to `https://api.spiral-app-temporal-demo.docker` to see Laravel welcome page.
 
 <br>
 
 ## 🧰 Project Architecture
 
-The project architecture of `wayofdev/spiral-starter-tpl` follows a structured approach with distinct layers:
+The project architecture of `wayofdev/spiral-app-temporal-demo` follows a structured approach with distinct layers:
 
 * **Domain:** Contains core business logic and entities.
 * **Bridge:** Connects the domain layer with external systems or services.
@@ -233,13 +233,13 @@ The project architecture of `wayofdev/spiral-starter-tpl` follows a structured a
 
 Each layer has defined dependencies, ensuring a clear separation of concerns and facilitating maintainability and scalability.
 
-For more information check [deptrac.yaml](https://github.com/wayofdev/spiral-starter-tpl/blob/develop/app/deptrac.yaml) located in repository `app` folder.
+For more information check [deptrac.yaml](https://github.com/wayofdev/spiral-app-temporal-demo/blob/develop/app/deptrac.yaml) located in repository `app` folder.
 
 <br>
 
 ## 🪄 Template
 
-This project was generated from the [spiral/app](https://github.com/spiral/app) repository using the command: `composer create-project spiral/app spiral-starter-tpl` with the following selected options:
+This project was generated from the [spiral/app](https://github.com/spiral/app) repository using the command: `composer create-project spiral/app spiral-app-temporal-demo` with the following selected options:
 
 <details>
   <summary>View Setup Options</summary>
