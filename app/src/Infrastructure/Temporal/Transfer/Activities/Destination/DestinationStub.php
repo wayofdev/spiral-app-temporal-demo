@@ -12,62 +12,62 @@ use Temporal\Workflow;
 
 final class DestinationStub
 {
-    public static function restoreDatabase(): ActivityProxy|RestoreDatabaseActivity
+    public static function restoreDatabase(): ActivityProxy|RestoreDatabase
     {
         return Workflow::newActivityStub(
-            RestoreDatabaseActivity::class,
+            RestoreDatabase::class,
             ActivityOptions::new()
                 ->withStartToCloseTimeout(CarbonInterval::minute())
                 ->withRetryOptions(
-                    RetryOptions::new()->withMaximumAttempts(1),
+                    RetryOptions::new()->withMaximumAttempts(7),
                 ),
         );
     }
 
-    public static function restoreFiles(): ActivityProxy|RestoreFilesActivity
+    public static function restoreFiles(): ActivityProxy|RestoreFiles
     {
         return Workflow::newActivityStub(
-            RestoreFilesActivity::class,
+            RestoreFiles::class,
             ActivityOptions::new()
                 ->withStartToCloseTimeout(CarbonInterval::minute())
                 ->withRetryOptions(
-                    RetryOptions::new()->withMaximumAttempts(1),
+                    RetryOptions::new()->withMaximumAttempts(7),
                 ),
         );
     }
 
-    public static function allocateSpace(): ActivityProxy|AllocateSpaceActivity
+    public static function allocateSpace(): ActivityProxy|AllocateSpace
     {
         return Workflow::newActivityStub(
-            AllocateSpaceActivity::class,
+            AllocateSpace::class,
             ActivityOptions::new()
                 ->withStartToCloseTimeout(CarbonInterval::minute())
                 ->withRetryOptions(
-                    RetryOptions::new()->withMaximumAttempts(1),
+                    RetryOptions::new()->withMaximumAttempts(7),
                 ),
         );
     }
 
-    public static function attachDomain(): ActivityProxy|AttachDomainActivity
+    public static function attachDomain(): ActivityProxy|AttachDomain
     {
         return Workflow::newActivityStub(
-            AttachDomainActivity::class,
+            AttachDomain::class,
             ActivityOptions::new()
                 ->withStartToCloseTimeout(CarbonInterval::minute())
                 ->withRetryOptions(
-                    RetryOptions::new()->withMaximumAttempts(1),
+                    RetryOptions::new()->withMaximumAttempts(7),
                 ),
         );
     }
 
-    public static function reConfigureWebsite(): ActivityProxy|ReConfigureWebsiteActivity
+    public static function reConfigureWebsite(): ActivityProxy|ReConfigureWebsite
     {
         return Workflow::newActivityStub(
-            ReConfigureWebsiteActivity::class,
+            ReConfigureWebsite::class,
             ActivityOptions::new()
                 ->withStartToCloseTimeout(CarbonInterval::minute())
                 ->withRetryOptions(
-                    RetryOptions::new()->withMaximumAttempts(1),
+                    RetryOptions::new()->withMaximumAttempts(7),
                 ),
         );
     }
