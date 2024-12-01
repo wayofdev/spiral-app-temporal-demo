@@ -34,17 +34,87 @@
 </p>
 <br>
 
-# Spiral Framework Starter Template
+# Spiral Demo with Temporal Workflows.
 
-This is an **opinionated** modified version of the Spiral Framework which aims at providing a Domain-Driven Design (DDD) structure.
+This project demonstrates the implementation of web application transfers using [Temporal.io](https://temporal.io) with [Spiral Framework](https://spiral.dev).
+
+It showcases how to handle complex, distributed workflows in a reliable and maintainable way.
 
 ## 📄 About
 
-To be added...
+**Imagine moving an entire website between servers - files, databases, domains - with zero downtime and automatic failure recovery.**
+
+This is exactly what this project achieves through durable [Workflows](https://docs.temporal.io/workflows?basic-workflow-definition=php).
+
+### → Demo Video
+
+[![Temporal Demo](./.github/docs/thumbnail.png)](./.github/docs/demo.mp4 "Temporal Demo")
+
+🙏 If you find this repository useful, consider giving it a ⭐️. Thank you!
 
 <br>
 
-🙏 If you find this repository useful, consider giving it a ⭐️. Thank you!
+### → The Challenge
+
+This project uses Website Transfer from `Server A` to `Server B` as an example scenario because it shows many common distributed system challenges:
+
+- Network issues during file transfer
+- Database backup corruption
+- DNS propagation delays
+- Server configuration problems
+- Timeout issues during large transfers
+
+Traditional approaches require complex error handling, manual recovery procedures, and often lead to extended downtimes. This project offers a robust solution.
+
+### → The Solution
+
+Using Temporal.io, this app demonstrates reliable, self-healing website transfer system that:
+
+- Automatically retries failed operations
+- Resumes from the last successful step after crashes
+- Provides real-time transfer status visibility
+- Handles long-running operations gracefully
+- Maintains consistency during the entire process
+
+For example, here's how a website transfer is initiated:
+
+```bash
+$ make up
+$ make ssh
+$ php app.php website:transfer
+```
+
+You can monitor the workflow execution through the Temporal UI at:
+
+```bash
+https://temporal.spiral-app-temporal-demo.docker
+```
+
+The system then automatically orchestrates the entire process:
+
+```mermaid
+graph TD
+    A[Start Transfer] --> B[Backup Files]
+    B --> C[Release Domain]
+    C --> D[Backup Database]
+    D --> E[Transfer Backups]
+    E --> F[Allocate Space]
+    F --> G[Restore Database]
+    G --> H[Restore Files]
+    H --> I[Attach Domain]
+    I --> J[Complete]
+```
+
+### → Use Cases
+
+This example can be adapted for various scenarios:
+
+- Website migrations between hosting providers
+- Server infrastructure updates
+- Disaster recovery procedures
+- Development environment replication
+
+The architecture provided serves as a template for implementing other complex, distributed workflows in your applications.
 
 <br>
 
