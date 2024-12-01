@@ -54,7 +54,7 @@ services:
       driver: ${DOCKER_TEMPORAL_LOG_DRIVER:-json-file}
 
   temporal-ui:
-    image: temporalio/ui:2.31.2
+    image: temporalio/ui:2.32.0
     container_name: ${COMPOSE_PROJECT_NAME}-temporal-ui
     restart: on-failure
     networks:

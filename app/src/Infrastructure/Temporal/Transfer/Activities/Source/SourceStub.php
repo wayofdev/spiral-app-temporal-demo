@@ -12,50 +12,50 @@ use Temporal\Workflow;
 
 final class SourceStub
 {
-    public static function initiateFilesBackup(): ActivityProxy|InitiateFilesBackupActivity
+    public static function backupFiles(): ActivityProxy|BackupFiles
     {
         return Workflow::newActivityStub(
-            InitiateFilesBackupActivity::class,
+            BackupFiles::class,
             ActivityOptions::new()
                 ->withStartToCloseTimeout(CarbonInterval::minute())
                 ->withRetryOptions(
-                    RetryOptions::new()->withMaximumAttempts(1),
+                    RetryOptions::new()->withMaximumAttempts(7),
                 ),
         );
     }
 
-    public static function initiateDatabaseBackup(): ActivityProxy|InitiateDatabaseBackupActivity
+    public static function backupDatabase(): ActivityProxy|BackupDatabase
     {
         return Workflow::newActivityStub(
-            InitiateDatabaseBackupActivity::class,
+            BackupDatabase::class,
             ActivityOptions::new()
                 ->withStartToCloseTimeout(CarbonInterval::minute())
                 ->withRetryOptions(
-                    RetryOptions::new()->withMaximumAttempts(1),
+                    RetryOptions::new()->withMaximumAttempts(7),
                 ),
         );
     }
 
-    public static function releaseDomain(): ActivityProxy|ReleaseDomainActivity
+    public static function releaseDomain(): ActivityProxy|ReleaseDomain
     {
         return Workflow::newActivityStub(
-            ReleaseDomainActivity::class,
+            ReleaseDomain::class,
             ActivityOptions::new()
                 ->withStartToCloseTimeout(CarbonInterval::minute())
                 ->withRetryOptions(
-                    RetryOptions::new()->withMaximumAttempts(1),
+                    RetryOptions::new()->withMaximumAttempts(7),
                 ),
         );
     }
 
-    public static function transferBackup(): ActivityProxy|TransferBackupActivity
+    public static function transferBackup(): ActivityProxy|TransferBackup
     {
         return Workflow::newActivityStub(
-            TransferBackupActivity::class,
+            TransferBackup::class,
             ActivityOptions::new()
                 ->withStartToCloseTimeout(CarbonInterval::minute())
                 ->withRetryOptions(
-                    RetryOptions::new()->withMaximumAttempts(1),
+                    RetryOptions::new()->withMaximumAttempts(7),
                 ),
         );
     }
